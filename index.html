@@ -4,84 +4,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeatherNow • Live Weather</title>
+  <title>Simple Weather App</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Custom CSS -->
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="app">
-    <div class="app-inner">
-      <!-- Header -->
-      <header class="app-header">
-        <div class="branding">
-          <div class="branding-icon">
-            <i class="fa-solid fa-cloud-sun"></i>
-          </div>
-          <div class="branding-text">
-            <h1>WeatherNow</h1>
-            <span>Clean, real-time weather powered by OpenWeatherMap</span>
-          </div>
-        </div>
+  <div class="app-container">
+    <h1 class="app-title">Simple Weather App</h1>
+    <p class="app-subtitle">Enter a city name to see current weather</p>
 
-        <div class="header-meta">
-          <div class="live-pill">
-            <span class="live-dot"></span>
-            <span>Live Data</span>
-          </div>
-          <span id="lastUpdated">Last updated: —</span>
-        </div>
-      </header>
-
-      <!-- Search -->
-      <section class="search-section">
-        <div class="search-input-wrapper">
-          <i class="fa-solid fa-location-dot"></i>
-          <input id="cityInput" type="text" placeholder="Search city (e.g., Hyderabad, IN)" autocomplete="off" />
-          <button id="searchBtn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Search</span>
-          </button>
-        </div>
-        <p class="search-hint">
-          <kbd>Enter</kbd>
-          to search • Example: <span>London</span>, <span>New York</span>, <span>Mumbai</span>
-        </p>
-      </section>
-
-      <!-- Weather content -->
-      <main id="contentArea">
-        <!-- Initial empty state -->
-        <div class="weather-card empty-state">
-          <div class="empty-icon">
-            <i class="fa-regular fa-compass"></i>
-          </div>
-          <div class="state-title">Search for a city to view live weather</div>
-          <p class="state-text">
-            Type any city name above and get instant temperature, conditions, wind, humidity and more – updated in
-            real time.
-          </p>
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <footer class="app-footer">
-        <span>Data source: OpenWeatherMap API</span>
-        <span>Built as a demo weather dashboard UI</span>
-      </footer>
+  
+    <div class="search-box">
+      <input id="cityInput" type="text" placeholder="Enter city name" autocomplete="off" />
+      <button id="searchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
+
+   
+    <div id="contentArea" class="content">
+
+    </div>
+
+    <p class="footer-text">Data from OpenWeatherMap</p>
   </div>
 
-  <!-- Custom JS -->
+
   <script src="script.js"></script>
 </body>
 
 </html>
+
